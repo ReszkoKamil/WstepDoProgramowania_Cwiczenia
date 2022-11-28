@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+bool czyPrzestepny(int rok);
+string napisOdTylu(string napis);
+int main() {
+	/*
+	int suma = 0;
+	int i = 0;
+	
+	for (int i = 0; i < 5; i++) {
+	suma = suma + tablica[i];
+	}
+	cout << suma<<endl; 
+	
+	while (i<=4){
+		suma = suma + tablica[i++];
+	}
+	
+	do {
+		suma += tablica[i];
+		i++;
+	} while (i <= 4);
+		cout << suma;
+		*/
+
+	cout << napisOdTylu("Halo");
+
+}
+bool czyPrzestepny(int rok) {
+
+	if (rok % 4 == 0 and (rok % 100 != 0 or rok % 400 == 0)) {
+		return true;
+	}
+	return false;
+}
+
+string napisOdTylu(string napis) {
+	string reversed = napis;
+	for (int i = 0; i < napis.length(); i++){
+		reversed[i] = napis[napis.length() - i - 1];
+	}
+	return reversed;
+}
